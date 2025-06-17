@@ -1,1 +1,15 @@
 this is my first yml file
+
+branch: main
+
+jobs:
+- job: Build  
+  displayName: 'Build Job'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo Building the project...
+    displayName: 'Build Step'         
+
+- job: Test
+  displayName: 'Test Job' 
